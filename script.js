@@ -23,6 +23,25 @@ document.addEventListener ('click',(event) => {
     }
 })
 
+cols.forEach((col) => {
+    col.addEventListener('touchstart', (event) => {
+      const isLocked = col.querySelector('i').classList.contains('fa-lock')
+      const text = col.querySelector('h1')
+      const button = col.querySelector('button')
+  
+      if (isLocked) {
+        return
+      }
+  
+      const color = chroma.random()
+      text.textContent = color
+      col.style.background = color
+  
+      setTextColor(text, color)
+      setTextColor(button, color)
+    })
+  })
+
 // function generationRandomColor() {
 //     const hexCod = '123456789ABCDEF'
 //     let color = ''
@@ -93,4 +112,3 @@ function getColorsFromHash() {
 }
 
 setRandomColors(true)
-
