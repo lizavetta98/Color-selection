@@ -19,7 +19,6 @@ body {
 }
 
 .col h1 {
-    padding: 10px;
     color: #fff;
     border-radius: 15px;
     transition: background 0.5s;
@@ -43,4 +42,28 @@ body {
 .col button:hover {
     background: rgba(0,0,0,0.3);
     cursor: pointer
+}
+
+@media (max-width: 576px) {
+    .col h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 420px) {
+    .col h1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .col h1 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 240px) {
+    .col h1 {
+        font-size: 10px;
+    }
 }
